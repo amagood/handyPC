@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="N:\clion projects\swaggerCppTest\oatpp-starter-master\cmake-build-relwithdebinfo-visual-studio\CMakeFiles\c2b503cd7862b6c3f94113fc9aefb025\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{DECB4185-69B2-3897-A8E1-0443D96D5CD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

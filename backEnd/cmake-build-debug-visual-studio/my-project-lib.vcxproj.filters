@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="N:\clion projects\swaggerCppTest\oatpp-starter-master\src\controller\MyController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="N:\clion projects\swaggerCppTest\oatpp-starter-master\src\AppComponent.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\clion projects\swaggerCppTest\oatpp-starter-master\src\controller\MyController.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="N:\clion projects\swaggerCppTest\oatpp-starter-master\src\dto\DTOs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="N:\clion projects\swaggerCppTest\oatpp-starter-master\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{CFA7E4A2-2E78-3B59-A211-F1A5F8487B46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7031C245-79F7-3632-BFF8-F0DD6860B9B6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
