@@ -1,0 +1,44 @@
+body {
+  background: #1f4e79;
+}
+#center-container {
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin: 2em auto .5em auto;
+  font: bold 6em Caveat;
+}
+
+#evaluate-button-container {
+  position: relative;
+  margin: 1.5em auto;
+  width: 6em;
+  height: 1.8em;
+  font-size: 2em;
+}
+
+#evaluate-button-container a {
+  display: block;
+}
+
+#evaluate-button, #evaluate-button-container a::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  border: none;
+  border-radius: .35em;
+  width: 100%;
+  height: 100%;
+  background: #ffc000;
+}
+
+#evaluate-button-container a::before {
+  content: "";
+  left: -.35em;
+  top: -.25em;
+  background: #d6a300;
+  transform: rotate(-5deg);
+}
