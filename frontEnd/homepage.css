@@ -7,24 +7,45 @@ body {
   color: white;
 }
 
-h1 {
-  margin: 2em auto .5em auto;
-  font: bold 6em Caveat;
+#title-container {
+  margin: 2em auto 1em auto;
+  height: 1em;
+  font-size: 6em;
+  font-weight: bold;
 }
 
-#evaluate-button-container {
+h1 {
+  font: inherit;
+  transition: font-size .2s;
+}
+
+h1:hover {
+  font-size: 1.05em;
+}
+
+#evaluate-button {
   position: relative;
   margin: 1.5em auto;
+  border-radius: .35em;
   width: 6em;
   height: 1.8em;
   font-size: 2em;
+  line-height: 1.8em;
+  color: black;
+  transition: box-shadow .5s;
 }
 
-#evaluate-button-container a {
+#evaluate-button:hover {
+  box-shadow: 0 0 1.5em #000;
+}
+
+#evaluate-button a {
   display: block;
+  color: inherit;
+  text-decoration: inherit;
 }
 
-#evaluate-button, #evaluate-button-container a::before {
+#evaluate-button span, #evaluate-button a::before {
   display: block;
   position: absolute;
   top: 0;
@@ -35,7 +56,7 @@ h1 {
   background: #ffc000;
 }
 
-#evaluate-button-container a::before {
+#evaluate-button a::before {
   content: "";
   left: -.35em;
   top: -.25em;
