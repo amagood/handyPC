@@ -1,6 +1,0 @@
-N:/clion projects/swaggerCppTest/oatpp-starter-master/cmake-build-relwithdebinfo-visual-studio/CMakeFiles/my-project-lib.dir
-N:/clion projects/swaggerCppTest/oatpp-starter-master/cmake-build-relwithdebinfo-visual-studio/CMakeFiles/my-project-exe.dir
-N:/clion projects/swaggerCppTest/oatpp-starter-master/cmake-build-relwithdebinfo-visual-studio/CMakeFiles/my-project-test.dir
-N:/clion projects/swaggerCppTest/oatpp-starter-master/cmake-build-relwithdebinfo-visual-studio/CMakeFiles/RUN_TESTS.dir
-N:/clion projects/swaggerCppTest/oatpp-starter-master/cmake-build-relwithdebinfo-visual-studio/CMakeFiles/ALL_BUILD.dir
-N:/clion projects/swaggerCppTest/oatpp-starter-master/cmake-build-relwithdebinfo-visual-studio/CMakeFiles/ZERO_CHECK.dir

@@ -16,33 +16,40 @@ add_library(${project_name}-lib
 ## link libs
 
 find_package(oatpp 1.0.0 REQUIRED)
-find_package(oatpp-swagger  1.0.0 REQUIRED)# <-- add this
+find_package(oatpp-swagger  1.0.0 REQUIRED) # <-- add this
 
 target_link_libraries(${project_name}-lib
         PUBLIC oatpp::oatpp
         PUBLIC oatpp::oatpp-test
-		PUBLIC oatpp::oatpp-swagger          # <-- add this
+        PUBLIC oatpp::oatpp-swagger          # <-- add this
 )
-add_definitions( 
--DOATPP_SWAGGER_RES_PATH="${OATPP_BASE_DIR}/bin/oatpp-swagger/res"
-)
+add_definitions(
+        -DOATPP_SWAGGER_RES_PATH="${OATPP_BASE_DIR}/bin/oatpp-swagger/res"
+) # <-- add this
+
 
 target_include_directories(${project_name}-lib PUBLIC src)
 
 ## add executables
+include_directories(lib)
 
 add_executable(${project_name}-exe
         src/App.cpp
-        test/app/MyApiTestClient.hpp)
+        test/app/MyApiTestClient.hpp
+        lib/json.hpp
+        src/errorLog.h src/serverLogicFunctions.cpp src/serverLogicFunctions.h)
+
 target_link_libraries(${project_name}-exe ${project_name}-lib)
 add_dependencies(${project_name}-exe ${project_name}-lib)
 
 add_executable(${project_name}-test
         test/tests.cpp
+        lib/json.hpp
         test/app/TestComponent.hpp
         test/app/MyApiTestClient.hpp
         test/MyControllerTest.cpp
         test/MyControllerTest.hpp
+        src/errorLog.h
 )
 
 target_link_libraries(${project_name}-test ${project_name}-lib)

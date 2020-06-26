@@ -25,6 +25,7 @@ DTO_INIT(MyDto, Object)
 
     DTO_FIELD(Int32, statusCode);
     DTO_FIELD(String, message);
+    DTO_FIELD(Int64, timestamp);
 
 };
 
@@ -33,10 +34,19 @@ class TimeDto : public oatpp::data::mapping::type::Object {
 DTO_INIT(TimeDto, Object)
 
     DTO_FIELD(Int32, statusCode);
-    DTO_FIELD(Int32, timestamp);
+    DTO_FIELD(Int64, timestamp);
 
 };
 
+class GeneralDto : public oatpp::data::mapping::type::Object {
+
+DTO_INIT(GeneralDto, Object)
+
+    DTO_FIELD(Int32, statusCode);
+    DTO_FIELD(Int64, timestamp);
+    DTO_FIELD(String, dataString);
+
+};
 #include OATPP_CODEGEN_END(DTO)
 
 #endif /* DTOs_hpp */

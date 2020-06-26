@@ -16,6 +16,7 @@
 #include "oatpp/parser/json/mapping/ObjectMapper.hpp"
 
 #include "oatpp/core/macro/component.hpp"
+
 #include "oatpp-swagger/Model.hpp"
 #include "oatpp-swagger/Resources.hpp"
 
@@ -30,7 +31,7 @@ public:
    *  Create ConnectionProvider component which listens on the port
    */
   OATPP_CREATE_COMPONENT(std::shared_ptr<oatpp::network::ServerConnectionProvider>, serverConnectionProvider)([] {
-    return oatpp::network::server::SimpleTCPConnectionProvider::createShared(25565);   //PORT
+    return oatpp::network::server::SimpleTCPConnectionProvider::createShared(9000);
   }());
   
   /**
@@ -54,38 +55,37 @@ public:
   OATPP_CREATE_COMPONENT(std::shared_ptr<oatpp::data::mapping::ObjectMapper>, apiObjectMapper)([] {
     return oatpp::parser::json::mapping::ObjectMapper::createShared();
   }());
-
-  /**
+/**
  *  General API docs info
  */
-OATPP_CREATE_COMPONENT(
-  std::shared_ptr<oatpp::swagger::DocumentInfo>, 
-  swaggerDocumentInfo
-)([] {
-  
-  oatpp::swagger::DocumentInfo::Builder builder;
-  builder
-   .setTitle("My Demo Service with Swagger-UI")
-   .setDescription("C++/oat++ Web Service with Swagger-UI")
-   .setVersion("1.0")
-   .setContactName("Mr. Developer")
-   .setContactUrl("https://oatpp.io/")
-   .setLicenseName("Apache License, Version 2.0")
-   .setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
-   .addServer("http://amagood1.no-ip.org:25565", "server on localhost");    //設定網址
-   return builder.build();
-}());
+    OATPP_CREATE_COMPONENT(
+            std::shared_ptr<oatpp::swagger::DocumentInfo>,
+            swaggerDocumentInfo
+    )([] {
+
+        oatpp::swagger::DocumentInfo::Builder builder;
+        builder
+                .setTitle("My Demo Service with Swagger-UI")
+                .setDescription("C++/oat++ Web Service with Swagger-UI")
+                .setVersion("1.0")
+                .setContactName("Mr. Developer")
+                .setContactUrl("https://oatpp.io/")
+                .setLicenseName("Apache License, Version 2.0")
+                .setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
+                .addServer("http://amagood1.no-ip.org:9000/", "server on localhost");
+        return builder.build();
+    }());
 /**
  *  Swagger-Ui Resources
  */
-OATPP_CREATE_COMPONENT(
-  std::shared_ptr<oatpp::swagger::Resources>, 
-  swaggerResources
-)([] {
-  return oatpp::swagger::Resources::loadResources(
-    OATPP_SWAGGER_RES_PATH
-  );
-}());
+    OATPP_CREATE_COMPONENT(
+            std::shared_ptr<oatpp::swagger::Resources>,
+            swaggerResources
+    )([] {
+        return oatpp::swagger::Resources::loadResources(
+                OATPP_SWAGGER_RES_PATH
+        );
+    }());
 };
 
 #endif /* AppComponent_hpp */

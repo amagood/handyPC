@@ -8,9 +8,9 @@
 
 #include "./controller/MyController.hpp"
 #include "./AppComponent.hpp"
+#include "oatpp-swagger/Controller.hpp"
 
 #include "oatpp/network/server/Server.hpp"
-#include "oatpp-swagger/Controller.hpp"
 
 #include <iostream>
 
@@ -38,11 +38,13 @@ void run() {
   /* Priny info about server port */
   OATPP_LOGI("MyApp", "Server running on port %s", connectionProvider->getProperty("port").getData());
 
-  auto docEndpoints = oatpp::swagger::Controller::Endpoints::createShared();
-  docEndpoints->pushBackAll(myController->getEndpoints());
-  auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints);
-  swaggerController->addEndpointsToRouter(router);
-  
+    auto docEndpoints =
+            oatpp::swagger::Controller::Endpoints::createShared();
+    docEndpoints->pushBackAll(myController->getEndpoints());
+    auto swaggerController =
+            oatpp::swagger::Controller::createShared(docEndpoints);
+    swaggerController->addEndpointsToRouter(router);
+
   /* Run server */
   server.run();
   
