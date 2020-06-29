@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -pthread -ldl -rdynamic CMakeFiles/my-project-test.dir/test/tests.cpp.o CMakeFiles/my-project-test.dir/test/MyControllerTest.cpp.o  -o my-project-test  libmy-project-lib.a /usr/local/lib/oatpp-1.0.0/liboatpp-swagger.a /usr/local/lib/oatpp-1.0.0/liboatpp-test.a /usr/local/lib/oatpp-1.0.0/liboatpp.a -lpthread -latomic 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmy-project-lib.a  CMakeFiles/my-project-lib.dir/src/controller/MyController.cpp.o
+/usr/bin/ranlib libmy-project-lib.a
