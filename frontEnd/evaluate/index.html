@@ -5,16 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=0">
   <title>Evaluate | Handy PC</title>
   <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="/style/theme.css">
+  <link rel="stylesheet" href="evaluate.css">
+  <script src="evaluate.js" defer></script>
 </head>
 <body>
   <div id="container">
 
-    <header>
-      <div id="title-container">
-        <h1>Handy PC Evaluate</h1>
+    <header class="page-header bg-light-grey">
+      <div id="title-container" class="title-font f-theme ma-auto">
+        <a href="."><h1>Handy PC Evaluate</h1></a>
       </div>
     </header>
     
+    <div id="center-container" class="ma-auto bg-white">
+
+      <div id="category-block" class="content-column bg-light-grey">
+        <div class="title-container bg-theme f-white"><h2>商品分類</h2></div>
+        <div class="scroll-container">
+          <ul id="category-list" class="bg-white">
+            <li class="f-grey">正在載入...</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="product-block" class="content-column bg-white">
+        <div class="title-container bg-theme f-white"><h2>瀏覽商品</h2></div>
+        <div class="scroll-container">
+          <span class="f-grey">請選擇分類或產品</span>
+          <div id="category-viewer" class="bg-white hide">
+            <h3 class="category-name"></h3>
+            <span class="f-grey f-small">共 <span class="product-count"></span> 項產品</span>
+            <p class="category-description p-indent-2"></p>
+            <table class="product-table">
+              <thead>
+                <tr>
+                  <th>名稱</th>
+                  <th>售價</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div id="product-viewer" class="bg-white hide">
+            <h3 class="product-name"></h3>
+            <div>
+              <button class="add-evaluate-product-button round-box bg-orange f-small f-white">
+                <div class="round-box clickable">加入估價單</div>
+              </button><br>
+              <span class="f-grey">分類: <span class="product-category f-black"></span></span><br>
+              <span class="f-grey">售價: $<span class="product-price f-green"></span></span>
+              <span class="f-grey">折扣: $<span class="product-discount f-black"></span></span>
+            </div>
+            <image class="product-image"></image>
+            <p class="product-description p-indent-2"></p>
+            <div>
+              <span class="f-grey">功耗: <span class="product-wattage f-black"></span>瓦<br></span>
+              <p class="product-details"></p>
+              <a class="product-discussion f-black" target="_blank">開箱討論</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="evaluate-block" class="content-column bg-light-grey">
+        <div class="title-container bg-theme f-white"><h2>估價單</h2></div>
+        <div class="scroll-container">
+          <ul class="evaluate-list ma-auto"></ul>
+          <ul class="evaluate-item-template hide">
+            <li class="round-box ma-auto">
+              <div class="product-info">
+                <div class="product-image-container">
+                  <img class="product-image ma-auto">
+                </div>
+                <div class="product-text clickable">
+                  <h3 class="product-name"></h3>
+                  <p class="product-description f-grey"></p>
+                </div>
+              </div>
+              <div class="product-shopping-info">
+                <div class="product-price-info f-green"><span class="product-price"></span>元/組</div>
+                <div class="product-num-control border-grey ma-auto">
+                  <span class="product-dec clickable">-</span>
+                  <span class="product-num">0</span>
+                  <span class="product-inc clickable">+</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <footer class="bg-grey f-white">
+          <div class="evaluation-summary">
+            <span>總價: <span class="total-price"></span>元</span>
+            <span>功耗: <span class="total-wattage"></span>瓦</span>
+          </div>
+          <div class="evaluation-control">
+            估價單id: <input type="text" class="evaluation-id f-small">  
+            <button class="create-evaluation-button round-box bg-orange f-small f-white">
+              <div class="round-box clickable">建立估價單</div>
+            </button>
+            <button class="show-evaluation-button round-box bg-orange f-small f-white">
+              <div class="round-box clickable">顯示估價單</div>
+            </button>
+            <button class="delete-evaluation-button round-box bg-orange f-small f-white">
+              <div class="round-box clickable">刪除估價單</div>
+            </button>
+          </div>
+        </footer>
+      </div>
+
+    </div>
+
+    <footer class="page-footer bg-theme f-white">
+      <span><a href="/">2020 &copy; HandyPC Team</a></span>
+    </footer>
+
   </div>
 </body>
 </html>
