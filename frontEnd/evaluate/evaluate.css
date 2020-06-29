@@ -1,0 +1,262 @@
+body {
+  min-width: 60em;
+  min-height: 30em;
+}
+
+.page-header {
+  width: 100%;
+}
+
+#title-container a, .page-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#title-container {
+  min-width: 60em;
+  max-width: 100em;
+  padding: 1em;
+}
+
+h1 {
+  color: #1f4e79
+}
+
+.page-footer {
+  width: 100%;
+  min-height: 10em;
+  padding: 2em;
+  text-align: center;
+}
+
+#center-container {
+  position: relative;
+  min-width: 60em;
+  max-width: 100em;
+  height: 40em;
+}
+.content-column {
+  position: absolute;
+  height: 100%;
+  overflow: auto;
+}
+
+.content-column .title-container {
+  left: 0;
+  right: 0;
+  height: 2.5em;
+  padding: .2em .5em;
+}
+
+.scroll-container {
+  position: absolute;
+  top: 2.5em;
+  height: 37.5em;
+  width: 100%;
+  overflow: auto;
+  padding: 1em;
+}
+
+#category-block {
+  left: 0;
+  width: 25%;
+}
+
+#category-list li {
+  display: block;
+  border-left: 0 solid #1f4e79;
+  border-bottom: 1px solid #888;
+  padding: .2em;
+  transition: .4s;
+}
+
+#category-list li:last-child {
+  border-bottom: none;
+}
+
+#category-list li.selected {
+  border-left-width: .5em;
+  font-weight: bold;
+}
+
+#product-block {
+  left: 25%;
+  width: 40%;
+}
+
+#category-viewer, #product-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+#category-viewer .category-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#category-viewer .category-description {
+  font-style: italic;
+}
+
+#category-viewer .product-table {
+  width: 100%;
+}
+
+#category-viewer .product-table tr {
+  border-bottom: 1px solid #888;
+}
+
+#category-viewer .product-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+#category-viewer .product-table td {
+  padding: .2em .5em;
+}
+
+#category-viewer .product-table td:last-child {
+  text-align: right;
+}
+
+#product-viewer .product-name {
+  display: inline-block;
+  padding-right: 4em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#product-viewer .add-evaluate-product-button {
+  display: block;
+  border: 0;
+  padding: 0;
+}
+
+#product-viewer .add-evaluate-product-button>div {
+  width: 100%;
+  height: 100%;
+  padding: .2em .5em;
+}
+
+#product-viewer .product-price {
+  margin-right: 1em;
+}
+
+#product-viewer .product-image {
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  max-height: 10em;
+}
+
+#evaluate-block {
+  right: 0;
+  width: 35%;
+}
+
+#evaluate-block .scroll-container {
+  height: 34em;
+}
+
+#evaluate-block .evaluate-list li {
+  position: relative;
+  margin-bottom: 1em;
+  width: 20em;
+  padding: .5em;
+  background: #fff;
+}
+
+#evaluate-block .evaluate-list li>div {
+  position: relative;
+  width: 100%;
+}
+
+#evaluate-block .evaluate-list li .product-info {
+  position: relative;
+  height: 5em;
+  overflow: hidden;
+}
+
+#evaluate-block .evaluate-list li .product-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+}
+
+#evaluate-block .evaluate-list li .product-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#evaluate-block .evaluate-list li .product-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 5em;
+}
+
+#evaluate-block .evaluate-list li .product-name {
+  font-style: bold;
+}
+
+#evaluate-block .evaluate-list li .product-shopping-info {
+  position: relative;
+  height: 1.5em;
+}
+
+#evaluate-block .evaluate-list li .product-shopping-info>div {
+  position: absolute;
+  top: 0;
+}
+
+#evaluate-block .evaluate-list li .product-price-info {
+  left: 0;
+  width: 35%;
+  text-align: right;
+}
+
+#evaluate-block .evaluate-list li .product-num-control {
+  display: inline-block;
+  right: 0;
+  text-align: center;
+}
+
+#evaluate-block .evaluate-list li .product-num-control>span {
+  display: inline-block;
+  width: 2em;
+}
+
+#evaluate-block .evaluate-list li .product-num-control .product-num {
+  width: 3em;
+}
+
+#evaluate-block footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5em;
+  padding: .2em .5em;
+}
+
+#evaluate-block footer>div {
+  height: 50%;
+}
+
+.evaluation-id {
+  width: 6em;
+}
+
+#evaluate-block .show-evaluation-button,
+#evaluate-block .create-evaluation-button,
+#evaluate-block .delete-evaluation-button {
+  border: none;
+}
+
+
