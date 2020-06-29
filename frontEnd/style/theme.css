@@ -22,6 +22,14 @@ h2 {
   font-size: 1.5em;
 }
 
+a {
+  color: inherit;
+}
+
+p {
+  margin-bottom: .5em;
+}
+
 .title-font {
   font-family: "Caveat", cursive, sans-serif;
 }
@@ -36,4 +44,86 @@ h2 {
   position: relative;
   min-width: 100%;
   min-height: 100%;
+}
+
+.bg-theme {
+  background-color: #1f4e79;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light-grey {
+  background-color: #ddd;
+}
+
+.bg-grey {
+  background-color: #888;
+}
+
+.bg-orange {
+  background-color: #ed7d31;
+}
+
+.f-theme {
+  color: #1f4e79;
+}
+
+.f-white {
+  color: #fff;
+}
+
+.f-grey {
+  color: #888;
+}
+
+.f-black {
+  color: #000;
+}
+
+.f-green {
+  color: #00b050;
+}
+
+.f-small {
+  font-size: .8em;
+}
+
+.p-indent-2 {
+  text-indent: 2em;
+}
+
+.border-grey {
+  border: 1px solid #888;
+}
+
+.round-box {
+  border-radius: 1em;
+}
+
+.ma-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.clickable:hover {
+  background-color: rgba(31, 78, 121, .1);
+}
+
+.hide {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
 }
