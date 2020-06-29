@@ -1,0 +1,7 @@
+handypc.sytes.net {
+    encode zstd gzip
+    root frontEnd
+    reverse_proxy /api/* :9000 {
+    }
+    file_server
+}
