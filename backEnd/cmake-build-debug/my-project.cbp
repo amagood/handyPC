@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="my-project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-1.0.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-swagger-1.0.0\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my-project-lib">
+				<Option output="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/libmy-project-lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOATPP_SWAGGER_RES_PATH=&quot;/usr/local/include/oatpp-1.0.0//bin/oatpp-swagger/res&quot;"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/src"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/lib"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp-swagger"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 my-project-lib"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my-project-lib/fast">
+				<Option output="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/libmy-project-lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOATPP_SWAGGER_RES_PATH=&quot;/usr/local/include/oatpp-1.0.0//bin/oatpp-swagger/res&quot;"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/src"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/lib"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp-swagger"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 my-project-lib/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my-project-exe">
+				<Option output="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/my-project-exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOATPP_SWAGGER_RES_PATH=&quot;/usr/local/include/oatpp-1.0.0//bin/oatpp-swagger/res&quot;"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/lib"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/src"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp-swagger"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 my-project-exe"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my-project-exe/fast">
+				<Option output="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/my-project-exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOATPP_SWAGGER_RES_PATH=&quot;/usr/local/include/oatpp-1.0.0//bin/oatpp-swagger/res&quot;"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/lib"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/src"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp-swagger"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 my-project-exe/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my-project-test">
+				<Option output="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/my-project-test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOATPP_SWAGGER_RES_PATH=&quot;/usr/local/include/oatpp-1.0.0//bin/oatpp-swagger/res&quot;"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/lib"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/src"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp-swagger"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 my-project-test"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my-project-test/fast">
+				<Option output="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/my-project-test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOATPP_SWAGGER_RES_PATH=&quot;/usr/local/include/oatpp-1.0.0//bin/oatpp-swagger/res&quot;"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/lib"/>
+					<Add directory="/home/amagood/文件/oatpp-starter-1.0.0/src"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp"/>
+					<Add directory="/usr/local/include/oatpp-1.0.0/oatpp-swagger"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 my-project-test/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/amagood/文件/oatpp-starter-1.0.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/lib/json.hpp">
+			<Option target="my-project-exe"/>
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/App.cpp">
+			<Option target="my-project-exe"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/AppComponent.hpp">
+			<Option target="my-project-lib"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/controller/MyController.cpp">
+			<Option target="my-project-lib"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/controller/MyController.hpp">
+			<Option target="my-project-lib"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/dto/DTOs.hpp">
+			<Option target="my-project-lib"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/errorLog.h">
+			<Option target="my-project-exe"/>
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/serverLogicFunctions.cpp">
+			<Option target="my-project-exe"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/serverLogicFunctions.h">
+			<Option target="my-project-exe"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/sqlite3.c">
+			<Option target="my-project-exe"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/sqlite3.h">
+			<Option target="my-project-exe"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/src/sqlite3ext.h">
+			<Option target="my-project-exe"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/test/MyControllerTest.cpp">
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/test/MyControllerTest.hpp">
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/test/app/MyApiTestClient.hpp">
+			<Option target="my-project-exe"/>
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/test/app/TestComponent.hpp">
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/test/tests.cpp">
+			<Option target="my-project-test"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-1.0.0/oatppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-1.0.0/oatppConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-1.0.0/oatppTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-1.0.0/oatppTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-swagger-1.0.0/oatpp-swaggerConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-swagger-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-swagger-1.0.0/oatpp-swaggerConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-swagger-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-swagger-1.0.0/oatpp-swaggerTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-swagger-1.0.0\"/>
+		</Unit>
+		<Unit filename="/home/amagood/文件/oatpp-starter-1.0.0/../../../../usr/local/lib/cmake/oatpp-swagger-1.0.0/oatpp-swaggerTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\oatpp-swagger-1.0.0\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
