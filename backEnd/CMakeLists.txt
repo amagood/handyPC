@@ -5,6 +5,7 @@ set(project_name my-project) ## rename your project here
 project(${project_name})
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_EXE_LINKER_FLAGS "-pthread -ldl")
 
 add_library(${project_name}-lib
         src/AppComponent.hpp
@@ -37,8 +38,11 @@ add_executable(${project_name}-exe
         src/App.cpp
         test/app/MyApiTestClient.hpp
         lib/json.hpp
-        src/errorLog.h src/serverLogicFunctions.cpp src/serverLogicFunctions.h)
+        src/errorLog.h src/serverLogicFunctions.cpp src/serverLogicFunctions.h
+        src/sqlite3.h src/sqlite3.c src/sqlite3ext.h
+        )
 
+target_link_libraries(${project_name}-exe ${CMAKE_DL_LIBS})
 target_link_libraries(${project_name}-exe ${project_name}-lib)
 add_dependencies(${project_name}-exe ${project_name}-lib)
 

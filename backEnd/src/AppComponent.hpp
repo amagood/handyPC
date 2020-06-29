@@ -72,7 +72,7 @@ public:
                 .setContactUrl("https://oatpp.io/")
                 .setLicenseName("Apache License, Version 2.0")
                 .setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
-                .addServer("http://amagood1.no-ip.org:9000/", "server on localhost");
+                .addServer("http://35.201.243.31:9000/", "server on localhost");
         return builder.build();
     }());
 /**

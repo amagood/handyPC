@@ -13,6 +13,7 @@
 #include <cstdio>
 #include <errorLog.h>
 #include <serverLogicFunctions.h>
+#include "sqlite3.h"
 
 #include "dto/DTOs.hpp"
 
@@ -51,6 +52,7 @@ public:
         dto->message = "Hello World!";
         unsigned long long ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
         dto->timestamp = (long long int) ms;
+
         return createDtoResponse(Status::CODE_200, dto);
     }
 
@@ -288,7 +290,7 @@ public:
 
         returnJson = getCategoryById(categoryId);
         debug(ms, "returnJson: "),debug(returnJson.dump(1).c_str()), debug("\n");
-        if(returnJson.empty()) ///ID cannot find
+        if(returnJson.empty() || !returnJson.contains("ID")) ///ID cannot find
         {
             ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
             dto->timestamp = (long long int) ms;
@@ -351,6 +353,7 @@ public:
         dto->timestamp = (long long int) ms;
         returnJson["timestamp"] = ms;
         returnJson["status"] = 200;
+        returnJson["ID"] = returnJson["Product_ID"];
         dto->dataString = returnJson.dump().c_str();
 
 
@@ -365,7 +368,7 @@ public:
                 "application/json"  //回傳值為JSON
         );
     }
-    ENDPOINT("POST", "/createEvaluation", createEvaluation,
+    ENDPOINT("POST", "/api/createEvaluation", createEvaluation,
              BODY_STRING(String, message)) {
         using namespace Error;
         json inputJson;
@@ -378,7 +381,7 @@ public:
 
 
         info(ms,"createEvaluation: inputJson:"),info(inputJson.dump().c_str()), info("\n");
-        std::vector<int> productIds = inputJson["productIds"];
+        std::vector<int> productIds = inputJson["ID"];
         debug(ms, "productIds vector = ");
         for(auto i:productIds)
             debug(i), debug(", ");
@@ -397,8 +400,12 @@ public:
         }
 
 
-
+        ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+        debug(ms, "Started createEvaluationByIds(productIds)\n");
         int newId = createEvaluationByIds(productIds);
+        ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+        debug(ms, "Finished createEvaluationByIds(productIds)\n");
+
         if(newId < 0) //failes
         {
             ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
@@ -412,7 +419,7 @@ public:
             return createDtoResponse(Status::CODE_200, dto);
         }
         returnJson["status"] = 200;
-        returnJson["evaluationId"] = newId;
+        returnJson["ID"] = newId;
         ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
         returnJson["timestamp"] =ms;
         dto->timestamp = (long long int) ms;
@@ -429,7 +436,7 @@ public:
                 "application/json"  //回傳值為JSON
         );
     }
-    ENDPOINT("POST", "/deleteEvaluation", deleteEvaluation,
+    ENDPOINT("POST", "/api/deleteEvaluation", deleteEvaluation,
              BODY_STRING(String, message)) {
         using namespace Error;
         json inputJson, returnJson;
@@ -439,9 +446,9 @@ public:
         inputJson = json::parse(inputStr);
         unsigned long long ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
-        info(ms,"createEvaluation: inputJson:"),info(inputJson.dump().c_str()), info("\n");
+        info(ms,"deleteEvaluation: inputJson:"),info(inputJson.dump().c_str()), info("\n");
 
-        if(!inputJson.contains("evaluationId"))
+        if(!inputJson.contains("ID"))
         {
             ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
             returnJson["status"] = 404;
@@ -453,7 +460,7 @@ public:
             dto->dataString = returnJson.dump().c_str();
             return createDtoResponse(Status::CODE_200, dto);
         }
-        int deleteId = inputJson["evaluationId"];
+        int deleteId = inputJson["ID"];
 
 
 
@@ -475,7 +482,52 @@ public:
         dto->timestamp = (long long int) ms;
         dto->statusCode = 200;
         dto->dataString = returnJson.dump().c_str();
-        info(ms, "Success deleteEvaluation"), info('\n');
+        info(ms, "Success deleteEvaluation("),info(deleteId), info(")\n");
+        return createDtoResponse(Status::CODE_200, dto);
+    }
+
+    ENDPOINT_INFO(getAllCategory) {
+        info->summary = "Get an exist evaluation by evaluationId";
+        info->addResponse<GeneralDto::ObjectWrapper>(
+                Status::CODE_200,
+                "application/json"
+        );
+    }
+    ENDPOINT("GET", "/api/getAllCategory", getAllCategory) {
+        auto dto = GeneralDto::createShared();
+        unsigned long long ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+        using namespace Error;
+
+        info(ms, "Into getAllCategories\n");
+
+        dto->statusCode = 500;
+        dto->timestamp = (long long int) ms;
+
+
+
+        ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+
+
+        json returnJson = getAllCategories();
+        if(returnJson.empty())//no result
+        {
+            dto->statusCode = 200;
+            ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+            dto->timestamp = (long long int) ms;
+
+            returnJson["status"] = 404;
+            returnJson["error"] = "getAllCategories() not found QAQ";
+            dto->dataString = returnJson.dump().c_str();
+            return createDtoResponse(Status::CODE_200, dto);
+        }
+        returnJson["status"] = 200;
+        dto->statusCode = 200;
+        ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+        info(ms, "finished: \n"), info(returnJson.dump(1).c_str()), info(ms, "\n");
+        dto->timestamp = (long long int) ms;
+        dto->dataString = returnJson.dump().c_str();
+
+
         return createDtoResponse(Status::CODE_200, dto);
     }
 

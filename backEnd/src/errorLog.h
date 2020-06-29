@@ -7,8 +7,8 @@
 
 #include <iostream>
 #define PrintError
-#define PrintInfo
-#define PrintDebug
+//#define PrintInfo
+//#define PrintDebug
 std::string unixTime2Str(unsigned long long int ms)
 {
     ms/=1000;
